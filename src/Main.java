@@ -5,13 +5,17 @@ public class Main {
     public static void main(String[] args){
         System.out.println("Pick a number between 1 and 10");
         Scanner input = new Scanner(System.in);
+        boolean isOnRepeat = true;
 
-        int inputtedNum = input.nextInt();
+        while (isOnRepeat) {
+            System.out.println("Playing Current Song");
+            System.out.println("Would you like to take this son off repeat? If so, answer yes");
+            String userInput = input.next();
 
-        if (inputtedNum < 5) {
-            System.out.println("Enjoy the good luck a friend bring you");
-        } else {
-            System.out.println("Your shoe selection will make you very happy today");
+            if(userInput.equals("yes")) {
+                isOnRepeat = false;
+            }
         }
+        System.out.println("Playing next Song");
     }
 }
